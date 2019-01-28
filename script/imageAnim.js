@@ -1,22 +1,44 @@
 (() => {
 	console.log('fired');
 
-	const theButton = document.querySelector("#buttonHolder img")
+	// set up the puzzle pieces and the boards.
+	// mmake and array called ...
+	const thePieces = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
-	// set up the puzzle pieces and boards
-	
-	
-	// when its done loading change to headline.
-	function changeHeadline() {
-		document.querySelector("h1").textContent = "Hello there!";
-		document.querySelector("p").textContent = "Hello again!";
+	// get a reference to the drag side
+	let piecesBoard = document.querySelector(".puzzle-pieces");
+	let puzzleBoard = document.querySelector(".puzzle-board");
 
+	// get a reference to the buttons at the bottoms as we change the puzzle.
+	let puzzleSelectors = document.querySelectorAll("#buttonHolder img");
+
+	// function go in the middle 
+	function createPuzzlePieces(pictureIndex) {
+		// generate images here and put in the container. --> need to make (top, left, right, bottom left and botrom right)
+		// debugger;
+		// loop through the image and refs and generate one for each
+		thePieces.forEach((piece, index) => {
+			let newPuzzlePiece = `<img id="piece${index}" class="puzzle-image" 
+			src="images/${piece + pictureIndex}.jpg" alt="puzzle piece">`;
+
+			piecesBoard.innerHTML += newPuzzlePiece;
+		});
 	}
-	// event handling in the bottom
-	// how it works in the way the user interacts with it.
-	// think through the 'think' about how you want the functions work.
-	theButton.addEventListener("click", changeHeadline);
-	
 
+	function resetPuzzlePieces(){
+		// change teh current puzzle, regenerate the pieces.
+		// debugger;
+		// clean out the puzzle pieces div
+		piecesBoard.innerHTML = "";
+
+		createPuzzlePieces(this.dataset.puzzleref);
+	}
+
+
+	// event handling goes here.
+	puzzleSelectors.forEach(button => button.addEventListener("click", resetPuzzlePieces));
+
+	// call the function to set up / generate the pieces
+	createPuzzlePieces(0);
 
 })();

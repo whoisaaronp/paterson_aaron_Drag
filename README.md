@@ -1,3 +1,12 @@
-# Super fantastic Drag and Drop Project Awesome Sauce
+## PUZZLE BOARDGAME
 
-Who worked on what and what were there roles for this project?
+# Match scattered image to create a picture.
+What Happens When Things Go Wrong
+
+
+
+## Drag and Drop Functionality 
+ This is a 3-step process
+# 1. handle the drag event
+# 2. handle the drag over event
+# 3. handle the drop event

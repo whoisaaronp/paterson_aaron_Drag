@@ -1,6 +1,9 @@
 ## PUZZLE BOARDGAME
 
 # Match scattered image to create a picture.
+What Happens When Things Go Wrong
+
+
 
 ## Drag and Drop Functionality 
 # this is a 3-step process

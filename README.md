@@ -7,6 +7,7 @@ What Happens When Things Go Wrong
 
 ## Drag and Drop Functionality 
  This is a 3-step process
+
 # 1. handle the drag event
 # 2. handle the drag over event
 # 3. handle the drop event

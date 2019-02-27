@@ -110,6 +110,37 @@ footer {
 	text-align: center;
 }
 
+
+.bl img
+{
+	right: 0;
+}
+
+
+.tl img
+{
+	bottom: 0; 
+	right: 0;
+}
+.tr img
+{
+	bottom: 0;
+
+{
+.tl, .tr
+{
+	text-align: right;
+
+}
+
+.drop-zone img
+{
+	width: auto !important;
+	padding: 0 !important;
+	cursor: default;
+	position: absolute;
+}
+
 #buttonHolder {
 	margin: 0px auto;
 	text-align:center;

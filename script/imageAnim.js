@@ -18,7 +18,7 @@
 	// functions go in the middle
 	function createPuzzlePieces(pictureIndex) {
 		// generate images here -> need to make 4 (top left, right bottom left, right)
-		// debugger;
+		debugger;
 		// loop through the images refs and generate one for each
 		thePieces.forEach((piece, index) => {
 			let newPuzzlePiece = `<img id="piece${index}" class="puzzle-image" src="images/${piece + pictureIndex}.jpg" alt="puzzle piece" draggable>`;
@@ -48,8 +48,7 @@
 		});
 	}
 
-	// handle the drop
-	//
+	// handle the drop functionality
 	dropZones.forEach(zone => {
 		zone.addEventListener("dragover", function(e) {
 			e.preventDefault();
@@ -59,12 +58,22 @@
 		zone.addEventListener("drop", function(e) {
 			e.preventDefault();
 			console.log('you dropped something on me');
-
+			// If statement for dragging the piece
 			let piece = e.dataTransfer.getData("text/plain");
+			if(zone.innerHTML == ""){
 			e.target.appendChild(document.querySelector(`#${piece}`));
+			// This area is the area that consist on the dropping zone
+			// console.log(firing zone);
+			}
+			// Else statement
+			else
+			{
+				false;
+			}
+
 		});
 	});
-
+	//reset the puzzle when complete
 	function resetPuzzlePieces() {
 		// change the current puzzle, regnerate the pieces
 		// debugger;

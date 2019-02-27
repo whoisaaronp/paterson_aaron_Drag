@@ -1,2 +1,9 @@
-# Week 4 in class Demo
-this week's demo is about drop in feature 
+## PUZZLE BOARDGAME
+
+# Match scattered image to create a picture.
+
+## Drag and Drop Functionality 
+# this is a 3-step process
+# 1. handle the drag event
+# 2. handle the drag over event
+# 3. handle the drop event
